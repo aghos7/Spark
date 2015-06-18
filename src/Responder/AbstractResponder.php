@@ -83,7 +83,7 @@ abstract class AbstractResponder implements ResponderInterface
         $this->response = $this->response->withStatus(500);
         $this->responseBody([
             'input' => $this->payload->getInput(),
-            'error' => $this->payload->getOutput(),
+            'error' => $this->payload->getMessages(),
         ]);
     }
 
